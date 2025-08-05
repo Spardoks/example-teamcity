@@ -8,6 +8,8 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "**/target/*.jar"
+
     vcs {
         root(HttpsGithubComSpardoksExampleTeamcityGitRefsHeadsMaster)
     }
